@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  background-color: #f8f9fd !important;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.bg-green {
+  background-color: #008001 !important;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-slate {
+  color: #5a5a5a;
+}
+
+.nav .nav-item .nav-link {
+  color: #5a5a5a;
+  text-transform: uppercase;
+}
+
+.card-body .card-text {
+  margin: 10px;
+}
+
+.navbar .nav {
+  margin-left: auto;
+}
+
+.max-w-4xl {
+  max-width: 960px !important;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.form-label {
+  font-weight: bold;
+}

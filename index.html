@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <div class="container-xl max-w-4xl">
+            <ul class="navbar-nav justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inventory</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Profile -->
+    <div class="container max-w-4xl">
+      <div class="card mb-3 mt-5 shadow">
+        <div class="row g-0">
+          <div class="col-12 col-md-3 text-center text-md-start">
+            <img
+              src="assets/profile.jpg"
+              class="img-fluid rounded-circle mx-auto d-block mb-3"
+              alt="profile"
+              style="height: 200px"
+            />
+          </div>
+          <div class="col-12 col-md-3 text-center text-md-start">
+            <div class="card-body h-full position-relative pt-4">
+              <h1 class="card-title">Daka</h1>
+              <small class="text-body-secondary">Front End Designer</small>
+              <div
+                class="d-flex justify-content-center justify-content-md-start gap-2 position-md-absolute bottom-md-0 mt-5"
+              >
+                <a href="#" class="btn btn-primary">Contact</a>
+                <a href="#" class="btn btn-outline-success">Resume</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2">
+            <div class="card-body font-bold text-center text-md-start">
+              <p class="card-text">Availability</p>
+              <p class="card-text">Age</p>
+              <p class="card-text">Location</p>
+              <p class="card-text">Experience</p>
+              <p class="card-text">Email</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div
+              class="card-body text-body-secondary text-center text-md-start"
+            >
+              <p class="card-text">Full Time</p>
+              <p class="card-text">24</p>
+              <p class="card-text">Jakarta</p>
+              <p class="card-text">2 Years</p>
+              <p class="card-text">test@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="container max-w-4xl mb-5">
+      <form class="mt-5 bg-white mt-5 shadow p-5">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Type your name"
+          />
+          <label for="role" class="form-label">Role</label>
+          <input
+            type="text"
+            class="form-control"
+            id="role"
+            placeholder="Type your role"
+          />
+          <label for="availability" class="form-label">Availability</label>
+          <input
+            type="text"
+            class="form-control"
+            id="availability"
+            placeholder="Type your availability"
+          />
+          <label for="age" class="form-label">Age</label>
+          <input
+            type="text"
+            class="form-control"
+            id="age"
+            placeholder="Type your age"
+          />
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            class="form-control"
+            id="location"
+            placeholder="Type your location"
+          />
+          <label for="experience" class="form-label">Year of Experience</label>
+          <input
+            type="text"
+            class="form-control"
+            id="experience"
+            placeholder="Type your experience"
+          />
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="Type your email"
+          />
+        </div>
+        <button type="submit" class="btn btn-success w-full">Submit</button>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
