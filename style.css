@@ -1,0 +1,46 @@
+
+        .profile-card {
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            height: 200px; /* Set a fixed height for the card */
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .profile-role {
+            font-size: 16px;
+            color: #6c757d;
+        }
+        .profile-buttons .btn {
+            margin-right: 10px;
+        }
+        .profile-info {
+            list-style: none;
+            padding: 0;
+        }
+        .profile-info li {
+            margin-bottom: 10px;
+        }
+        .nav-link {
+            color: #000;
+        }
+        .form-container {
+            margin-top: 30px;
+        }
+		.vertical-line {
+            border-left: 2px solid #dee2e6;
+            height: 100%;
+            margin-left: 200px;
+            margin-right: 20px;
+        }

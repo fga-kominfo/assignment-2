@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card with Nav and Form</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inventory</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div id="result-container"></div>
+        <div class="col-md-12">
+          <div class="profile-card d-flex align-items-center">
+            <!-- Profile Image -->
+            <img src="foto.png" alt="Profile Image" class="profile-img mr-4" />
+            <!-- Profile Details -->
+            <div>
+              <h2 class="profile-name" id="name-data">Teguh Yuhono</h2>
+              <p class="profile-role" id="role-data">Front End Designer</p>
+              <div class="profile-buttons">
+                <button class="btn btn-primary" id="edit-btn">Edit</button>
+                <button class="btn btn-outline-success" id="resume-btn">
+                  Resume
+                </button>
+              </div>
+            </div>
+            <!-- Vertical Line -->
+            <div class="vertical-line"></div>
+            <!-- Profile Info -->
+            <div class="ml-auto">
+              <ul class="profile-info">
+                <li><strong id="availability-label">Availability</strong></li>
+                <li><strong id="age-label">Usia</strong></li>
+                <li><strong id="location-label">Lokasi</strong></li>
+                <li><strong id="experience-label">Pengalaman</strong></li>
+                <li><strong id="email-label">Email</strong></li>
+              </ul>
+            </div>
+            <div class="ml-auto">
+              <ul class="profile-info">
+                <li id="availability-data">Full Time</li>
+                <li id="age-data">29</li>
+                <li id="location-data">Bekasi</li>
+                <li id="experience-data">10 Tahun</li>
+                <li id="email-data">teguhyuhono10@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Section -->
+    <form id="profile-form">
+      <div class="row form-container">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">              
+                <div class="form-group">
+                  <label for="name"><strong>Nama</strong></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="masukkan nama anda"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="role"><strong>Role</strong></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="role"
+                    placeholder="masukkan role anda"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="availability"
+                    ><strong>Availability</strong></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="availability"
+                    placeholder="masukkan Availability anda"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="age"><strong>Usia</strong></label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="age"
+                    placeholder="masukkan Usia anda"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="location"><strong>Lokasi</strong></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="location"
+                    placeholder="masukkan Lokasi anda"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="experience"
+                    ><strong>Years Experience</strong></label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="experience"
+                    placeholder="masukkan Years Experience anda"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email"><strong>Email</strong></label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="masukkan Email anda"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="button"
+                    class="form-control btn btn-md btn-success"
+                    value="Submit"
+                    id="show-data-btn"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript for interactivity -->
+    <script src="script.js"></script>
+  </body>
+</html>
