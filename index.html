@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <meta name="description" content="Halaman profil pengguna yang menampilkan informasi pribadi dan pekerjaan.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" aria-label="Main Navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#">FGAxHacktiv8</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PRODUCT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">INVENTORI</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="container mt-5">
+        <div class="profile-card mb-5">
+            <div class="profile-header">
+                <img src="img.jpg" alt="Profile Image" class="profile-img" loading="lazy">
+                <h2 class="profile-name">Nama Anda</h2>
+                <p class="profile-role">Front End Designer</p>
+            </div>
+            <div class="profile-body">
+                <div class="row">
+                    <div class="col-md-6 profile-info">
+                        <p><i class="fas fa-briefcase"></i> <span class="availability">Full Time</span></p>
+                        <p><i class="fas fa-birthday-cake"></i> <span class="usia">19 Tahun</span></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span class="lokasi">Jakarta</span></p>
+                    </div>
+                    <div class="col-md-6 profile-info">
+                        <p><i class="fas fa-clock"></i> <span class="experience">2 Tahun Pengalaman</span></p>
+                        <p><i class="fas fa-envelope"></i> <span class="email">email@gmail.com</span></p>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-custom me-2" id="editBtn">Edit</button>
+                    <button class="btn btn-outline-custom">Resume</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Section (Initially hidden) -->
+        <div class="form-container" id="formContainer" style="display: none;">
+            <h3 class="mb-4">Update Profile</h3>
+            <form id="profileForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="name" placeholder="Masukkan Nama Anda" required>
+                </div>
+                <div class="mb-3">
+                    <label for="role" class="form-label">Role</label>
+                    <input type="text" class="form-control" id="role" required>
+                </div>
+                <div class="mb-3">
+                    <label for="availability" class="form-label">Availability</label>
+                    <input type="text" class="form-control" id="availability" required>
+                </div>
+                <div class="mb-3">
+                    <label for="usia" class="form-label">Usia</label>
+                    <input type="number" class="form-control" id="usia" required min="1">
+                </div>
+                <div class="mb-3">
+                    <label for="lokasi" class="form-label">Lokasi</label>
+                    <input type="text" class="form-control" id="lokasi" required>
+                </div>
+                <div class="mb-3">
+                    <label for="experience" class="form-label">Years Experience</label>
+                    <input type="number" class="form-control" id="experience" required min="0">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
