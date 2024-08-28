@@ -1,0 +1,25 @@
+.container-fluid {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px 100px;
+}
+
+.nav-item {
+  padding-left: 40px;
+  text-transform: uppercase;
+}
+
+.profil {
+  height: 200px;
+  width: 200px;
+}
+
+.container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 60px;
+  padding: 20px 20px 20px 20px;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}
