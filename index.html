@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigment 2</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-body shadow">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" style="margin-right: 6.5rem;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PRODUCT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">INVENTORY</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container mt-5">
+        <!-- Card 1 -->
+        <div class="card mb-4" id="card1">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2 mx-4">
+                        <img src="images/user.jpg" class="img-fluid rounded-circle" style="width: 180px; height: 180px;"
+                            alt="Image">
+                    </div>
+                    <div class="col-md-4 mt-4">
+                        <h5 id="valueName" class="fw-bolder">Robert Siagian</h5>
+                        <p id="valueRole">Front End Developer</p>
+                        <div class="row pt-4">
+                            <div class="col-lg-2 me-3">
+                                <button id="editButton" type="button"
+                                    class="btn btn-primary fs-6 shadow-sm px-3 py-2">Edit</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-success px-3 py-2">Resume</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="fs-6">Availability</h5>
+                            </div>
+                            <div class="col">
+                                <p id="valueAvailability" class="fs-6">Full Time</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="fs-6">Usia</h5>
+                            </div>
+                            <div class="col">
+                                <p id="valueAge" class="fs-6">22</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="fs-6">Lokasi</h5>
+                            </div>
+                            <div class="col">
+                                <p id="valueLocation" class="fs-6">Medan</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="fs-6">Pengalaman</h5>
+                            </div>
+                            <div class="col">
+                                <p id="valueExperience" class="fs-6">1 Tahun</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="fs-6">Email</h5>
+                            </div>
+                            <div class="col">
+                                <p id="valueEmail" class="fs-6">roberthussebastians@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" id="cardForm" style="display: none;">
+            <div class="card-body">
+                <form id="updateForm">
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputRole" class="form-label">Role</label>
+                        <input type="text" class="form-control" id="inputRole" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputAvailability" class="form-label">Availability</label>
+                        <input type="text" class="form-control" id="inputAvailability" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputAge" class="form-label">Usia</label>
+                        <input type="text" class="form-control" id="inputAge" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputLocation" class="form-label">Lokasi</label>
+                        <input type="text" class="form-control" id="inputLocation" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputExperience" class="form-label">Pengalaman</label>
+                        <input type="text" class="form-control" id="inputExperience" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="">
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success shadow">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Script External -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>
