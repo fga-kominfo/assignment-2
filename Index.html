@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg p-2 shadow-navbar">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="d-flex justify-content-lg-end w-100">
+            <div class="navbar-nav">
+              <a class="nav-link active m-2" aria-current="page" href="#">HOME</a>
+              <a class="nav-link m-2" href="#">PRODUCT</a>
+              <a class="nav-link m-2" href="#">GALLERY</a>
+              <a class="nav-link m-2" href="#">BLOG</a>
+              <a class="nav-link m-2" href="#">INVENTORY</a>
+            </div>
+          </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div id="container-1" class="container text-center">
+          <div class="row d-flex align-items-center">
+            <div class="col-3">
+              <img src="assets/images3.png" alt="profil" class="img-fluid">
+            </div>
+            <div class="col-4 text-start ">
+              <div class="namaprofil">
+                <h2 id="profileName"> Mu'azah Al'Adawiyah</h2>
+                <p id="role"> Graphic Designer</p>
+              </div>
+              <div id="button" class="d-flex justify-content-start align-items-center ps-0 pe-3">
+                  <button type="submit" class="btn-kontak">Kontak</button>
+                  <button type="submit" class="btn-resume">Resume</button>
+              </div>              
+            </div>
+            <div class="col-5">
+              <table cellpadding="10">
+                  <tr align="left">
+                      <th class="pe-4">Availability</th>
+                      <td id="availability">Full Time</td>
+                  </tr>
+                  <tr align="left">
+                      <th class="pe-4">Usia</th>
+                      <td id="usia">23 Tahun</td>
+                  </tr>
+                  <tr align="left">
+                      <th class="pe-4">Lokasi</th>
+                      <td id="lokasi">Jambi</td>
+                  </tr>
+                  <tr align="left">
+                      <th class="pe-4">Pengalaman</th>
+                      <td id="pengalaman">1 Tahun</td>
+                  <tr align="left">
+                      <th class="pe-4">Email</th>
+                      <td id="email">muazahaladawiyah46@gmail.com</td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+      </div>
+
+      <div class="container-2">
+        <form id="profileForm">
+            <div class="mb-3">
+              <label for="exampleInputNama1" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="exampleInputNama1" placeholder="Masukkan Nama" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputRole1" class="form-label">Role</label>
+              <input type="text" class="form-control" id="exampleInputRole1" placeholder="" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputAvailability1" class="form-label">Availability</label>
+              <input type="text" class="form-control" id="exampleInputAvailability1" placeholder="" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputUsia1" class="form-label">Usia</label>
+              <input type="number" min="0" class="form-control" id="exampleInputUsia1" placeholder="" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputLokasi1" class="form-label">Lokasi</label>
+              <input type="text" class="form-control" id="exampleInputLokasi1" placeholder="" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputYears" class="form-label">Years Experience</label>
+                <input type="number" min="0" class="form-control" id="exampleInputYears1" placeholder="" required>
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="" required>
+            </div>
+            <button type="submit" class="btn-submit" style="width: 100%;">SUBMIT</button>
+        </form>
+      </div>  
+    </div>
+
+    <script src="js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
