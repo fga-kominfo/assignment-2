@@ -65,8 +65,8 @@
           </div>
           <div class="col-12 col-md-3 text-center text-md-start">
             <div class="card-body h-full position-relative pt-4">
-              <h1 class="card-title">Daka</h1>
-              <small class="text-body-secondary">Front End Designer</small>
+              <h1 id="profile-name" class="card-title">Daka</h1>
+              <small id="profile-role" class="text-body-secondary">Front End Designer</small>
               <div
                 class="d-flex justify-content-center justify-content-md-start gap-2 position-md-absolute bottom-md-0 mt-5"
               >
@@ -85,14 +85,12 @@
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div
-              class="card-body text-body-secondary text-center text-md-start"
-            >
-              <p class="card-text">Full Time</p>
-              <p class="card-text">24</p>
-              <p class="card-text">Jakarta</p>
-              <p class="card-text">2 Years</p>
-              <p class="card-text">test@gmail.com</p>
+            <div id="profile-details" class="card-body text-body-secondary text-center text-md-start">
+              <p id="profile-availability" class="card-text">Full Time</p>
+              <p id="profile-age" class="card-text">24</p>
+              <p id="profile-location" class="card-text">Jakarta</p>
+              <p id="profile-experience" class="card-text">2 Years</p>
+              <p id="profile-email" class="card-text">test@gmail.com</p>
             </div>
           </div>
         </div>
@@ -101,7 +99,7 @@
 
     <!-- Form -->
     <div class="container max-w-4xl mb-5">
-      <form class="mt-5 bg-white mt-5 shadow p-5">
+      <form id="profile-form" class="mt-5 bg-white mt-5 shadow p-5">
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
           <input
@@ -147,7 +145,7 @@
           />
           <label for="email" class="form-label">Email</label>
           <input
-            type="text"
+            type="email"
             class="form-control"
             id="email"
             placeholder="Type your email"
@@ -156,6 +154,52 @@
         <button type="submit" class="btn btn-success w-full">Submit</button>
       </form>
     </div>
+
+    <script>
+      document.getElementById("profile-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Ambil nilai dari form
+        const name = document.getElementById("name").value;
+        const role = document.getElementById("role").value;
+        const availability = document.getElementById("availability").value;
+        const age = document.getElementById("age").value;
+        const location = document.getElementById("location").value;
+        const experience = document.getElementById("experience").value;
+        const email = document.getElementById("email").value;
+
+        // Validasi input
+        if (!name || !role || !availability || !age || !location || !experience || !email) {
+          alert("All fields are required!");
+          return;
+        }
+
+        if (isNaN(age) || isNaN(experience)) {
+          alert("Age and Experience should be numbers!");
+          return;
+        }
+
+        if (!validateEmail(email)) {
+          alert("Please enter a valid email address!");
+          return;
+        }
+
+        // Update profile
+        document.getElementById("profile-name").textContent = name;
+        document.getElementById("profile-role").textContent = role;
+        document.getElementById("profile-availability").textContent = availability;
+        document.getElementById("profile-age").textContent = age;
+        document.getElementById("profile-location").textContent = location;
+        document.getElementById("profile-experience").textContent = experience + " Years";
+        document.getElementById("profile-email").textContent = email;
+      });
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+      }
+    </script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
