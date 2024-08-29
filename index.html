@@ -66,7 +66,9 @@
           <div class="col-12 col-md-3 text-center text-md-start">
             <div class="card-body h-full position-relative pt-4">
               <h1 id="profile-name" class="card-title">Daka</h1>
-              <small id="profile-role" class="text-body-secondary">Front End Designer</small>
+              <small id="profile-role" class="text-body-secondary"
+                >Front End Designer</small
+              >
               <div
                 class="d-flex justify-content-center justify-content-md-start gap-2 position-md-absolute bottom-md-0 mt-5"
               >
@@ -85,7 +87,10 @@
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div id="profile-details" class="card-body text-body-secondary text-center text-md-start">
+            <div
+              id="profile-details"
+              class="card-body text-body-secondary text-center text-md-start"
+            >
               <p id="profile-availability" class="card-text">Full Time</p>
               <p id="profile-age" class="card-text">24</p>
               <p id="profile-location" class="card-text">Jakarta</p>
@@ -155,50 +160,7 @@
       </form>
     </div>
 
-    <script>
-      document.getElementById("profile-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        // Ambil nilai dari form
-        const name = document.getElementById("name").value;
-        const role = document.getElementById("role").value;
-        const availability = document.getElementById("availability").value;
-        const age = document.getElementById("age").value;
-        const location = document.getElementById("location").value;
-        const experience = document.getElementById("experience").value;
-        const email = document.getElementById("email").value;
-
-        // Validasi input
-        if (!name || !role || !availability || !age || !location || !experience || !email) {
-          alert("All fields are required!");
-          return;
-        }
-
-        if (isNaN(age) || isNaN(experience)) {
-          alert("Age and Experience should be numbers!");
-          return;
-        }
-
-        if (!validateEmail(email)) {
-          alert("Please enter a valid email address!");
-          return;
-        }
-
-        // Update profile
-        document.getElementById("profile-name").textContent = name;
-        document.getElementById("profile-role").textContent = role;
-        document.getElementById("profile-availability").textContent = availability;
-        document.getElementById("profile-age").textContent = age;
-        document.getElementById("profile-location").textContent = location;
-        document.getElementById("profile-experience").textContent = experience + " Years";
-        document.getElementById("profile-email").textContent = email;
-      });
-
-      function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(String(email).toLowerCase());
-      }
-    </script>
+    <script src="index.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
