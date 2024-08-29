@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portofolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5">
+      <div class="container-lg">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">MyPortofolio</a>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-2">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Product</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Inventory</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-lg">
+      <main class="card mb-5">
+        <div class="row g-0 my-2">
+          <div class="col-12 col-lg-2 align-content-center text-center ps-lg-3">
+            <img
+              class="rounded-circle img-fluid"
+              alt="avatar1"
+              src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+            />
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card-body text-center text-lg-start">
+              <h5 class="card-title" id="saveName">Muhammad Nabil Muyassar Rahman</h5>
+              <p class="card-text" id="saveRole">Full Stack Developer</p>
+              <div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
+                <button id="showFormBtn" href="#" class="btn btn-primary me-lg-2 mb-2">Edit</button>
+                <a href="https://drive.google.com/file/d/1xmAPTxFaNmAm0euf88n4sB2Z8YlHLoxG/view?usp=sharing" target="_blank" class="btn btn-outline-success mb-2">Resume</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6 col-sm-4">Availability</div>
+                <div class="col-6 col-sm-8 text-end text-sm-start" id="saveAvailability">
+                  Full Time
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-4">Age</div>
+                <div class="col-6 col-sm-8 text-end text-sm-start" id="saveAge">21</div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-4">Location</div>
+                <div class="col-6 col-sm-8 text-end text-sm-start" id="saveLocation">Jakarta</div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-4">Experience</div>
+                <div class="col-6 col-sm-8 text-end text-sm-start" id="saveExperience">1 Year(s)</div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-4">Email</div>
+                <div class="col-6 col-sm-8 text-end text-sm-start" id="saveEmail">
+                  nabil.muyassar.work@gmail.com
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <section class="collapse" id="formSection">
+        <div class="card mb-5">
+          <form class="m-3" id="myForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your name here"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="role" class="form-label">Role</label>
+              <input
+                type="text"
+                class="form-control"
+                id="role"
+                placeholder="Enter your role here"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="availability" class="form-label">Availability</label>
+              <input
+                type="text"
+                class="form-control"
+                id="availability"
+                placeholder="What type of job are you available with? (eg. Full Time)"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label">Age</label>
+              <input
+                type="number"
+                class="form-control"
+                id="age"
+                min="1"
+                placeholder="Enter your current age here"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="location" class="form-label">Location</label>
+              <input
+                type="text"
+                class="form-control"
+                id="location"
+                placeholder="Your place of stay at the moment"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="experience" class="form-label"
+                >Year(s) of Experience</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="experience"
+                min="0"
+                placeholder="How many years of experience do you have?"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email here"
+              />
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bootstrap JS Dependencies -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="index.js"></script>
+  </body>
+</html>
