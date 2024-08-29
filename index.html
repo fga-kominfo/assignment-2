@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Editor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the header */
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .navbar-nav .nav-link {
+            color: #666666;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        .navbar-toggler {
+            border: none;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2866,66,66,1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .profile-card {
+            max-width: 900px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border: 2px solid #ddd;
+        }
+
+        .profile-details {
+            margin-left: 20px;
+            flex-grow: 1;
+        }
+
+        .profile-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .contact-button {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .resume-button {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .profile-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-info li {
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-details {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .profile-actions {
+                justify-content: center;
+            }
+        }
+
+        .form-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inventory</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Profile Display -->
+    <div class="container">
+        <div class="card profile-card">
+            <div class="profile-info">
+                <div class="d-flex align-items-center">
+                    <img src="foto2.jpeg" class="img-fluid rounded-circle mb-3" alt="Profile Image">
+                    <div class="profile-details">
+                        <h3 id="display-name">Zahra vonny</h3>
+                        <p class="text-muted" id="display-role">Front End Designer</p>
+                        <div class="profile-actions">
+                            <button class="btn contact-button" onclick="showForm()">Edit</button>
+                            <button class="btn resume-button">Resume</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <ul>
+                        <li><strong>Availability : </strong> <span id="display-availability">Full Time</span></li>
+                        <li><strong>Age : </strong> <span id="display-age">19</span></li>
+                        <li><strong>Location : </strong> <span id="display-location">Jakarta Pusat</span></li>
+                        <li><strong>Experience : </strong> <span id="display-experience">2 Tahun</span></li>
+                        <li><strong>Email : </strong> <span id="display-email">zahrvony338@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Edit Form -->
+    <!-- Profile Edit Form -->
+<div class="container form-container">
+    <div class="card profile-card">
+        <div class="card-body">
+            <form onsubmit="updateProfile(event)">
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="nama" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="inputrole" class="form-label">Role</label>
+                    <input type="text" class="form-control" id="inputrole" placeholder="Enter your role">
+                </div>
+                <div class="mb-3">
+                    <label for="availability" class="form-label">Availability</label>
+                    <input type="text" class="form-control" id="availability" placeholder="Availability">
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="text" class="form-control" id="age" placeholder="Enter Age">
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="location" placeholder="Enter Location">
+                </div>
+                <div class="mb-3">
+                    <label for="experience" class="form-label">Years Experience</label>
+                    <input type="text" class="form-control" id="experience" placeholder="Enter Years Experience">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email">
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-secondary" onclick="hideForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
+ 
