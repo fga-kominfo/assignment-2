@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2 - Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-xl">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">PRODUCT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">INVENTORY</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Profile -->
+    <div class="container-xl">
+      <div class="row" id="profile-card">
+        <div class="col-12 col-md-2">
+          <img
+            src="./images/user.png"
+            alt="user profile picture"
+            class="user-profile-pic"
+          />
+        </div>
+        <div class="col-12 col-md-5">
+          <h3 id="name-profile">Mario Christofell</h3>
+          <p id="role-profile">Front End Designer</p>
+          <div class="kontak">
+            <button
+              type="button"
+              class="btn btn-primary rounded-0"
+              id="edit"
+              onclick="editProfileData()"
+            >
+              Edit
+            </button>
+            <button type="button" class="btn btn-outline-success rounded-0">
+              Resume
+            </button>
+          </div>
+        </div>
+        <div class="col-6 col-md-2 mt-5 mt-lg-1">
+          <div class="info info-bold">
+            <p>Availability</p>
+            <p>Usia</p>
+            <p>Lokasi</p>
+            <p>Pengalaman</p>
+            <p>Email</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-2 mt-5 mt-lg-1">
+          <div class="info">
+            <p id="availability-profile">Full Time</p>
+            <p id="usia-profile">19</p>
+            <p id="lokasi-profile">Jakarta</p>
+            <p id="pengalaman-profile">2</p>
+            <p id="email-profile">email@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="container-xl">
+      <form action="" id="form" onsubmit="updateProfileData(event)">
+        <label for="nama">Nama</label><br />
+        <input
+          type="text"
+          name="nama"
+          id="name-form-value"
+          placeholder="Masukkan Nama Anda"
+          class="form-control mb-0"
+          required
+        /><br />
+        <label for="role">Role</label><br />
+        <input
+          type="text"
+          name="role"
+          id="role-form-value"
+          placeholder="Masukkan Role Anda"
+          class="form-control mb-0"
+          required
+        /><br />
+        <label for="availability">Availibility</label><br />
+        <input
+          type="text"
+          name="availability"
+          id="availability-form-value"
+          placeholder="Masukkan Availability Anda"
+          class="form-control mb-0"
+          required
+        /><br />
+        <label for="usia">Usia</label><br />
+        <input
+          type="text"
+          name="usia"
+          id="usia-form-value"
+          placeholder="Masukkan Usia Anda"
+          class="form-control mb-0"
+          required
+        /><br />
+        <label for="lokasi">Lokasi</label><br />
+        <input
+          type="text"
+          name="lokasi"
+          id="lokasi-form-value"
+          placeholder="Masukkan Lokasi Anda"
+          class="form-control mb-0"
+          required
+        /><br />
+        <label for="years">Years Experience</label><br />
+        <input
+          type="text"
+          name="years"
+          id="years-form-value"
+          placeholder="Masukkan Years Experience Anda"
+          class="form-control mb-0"
+          required
+        /><br />
+        <label for="email">Email</label><br />
+        <input
+          type="text"
+          name="email"
+          id="email-form-value"
+          placeholder="Masukkan Email Anda"
+          class="form-control mb-3"
+          required
+        />
+        <button
+          type="submit"
+          name="button"
+          class="w-100 btn btn-success mt-2 rounded-0"
+        >
+          SUBMIT
+        </button>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
