@@ -81,6 +81,7 @@ function submitForm() {
   if (inputEmail) {
     value.email = inputEmail;
   }
+
   document.getElementById("showName").textContent = value.name;
   document.getElementById("showRole").textContent = value.role;
   document.getElementById("showAvail").textContent = value.avail;
@@ -88,4 +89,13 @@ function submitForm() {
   document.getElementById("showLoc").textContent = value.location;
   document.getElementById("showExp").textContent = value.experience;
   document.getElementById("showEmail").textContent = value.email;
+
+  //kosongin value di form inputan
+  document.getElementById("idName").value = "";
+  document.getElementById("idRole").value = "";
+  document.getElementById("idAvailability").value = "";
+  document.getElementById("idAge").value = "";
+  document.getElementById("idLocation").value = "";
+  document.getElementById("idExperience").value = "";
+  document.getElementById("idEmail").value = "";
 }
