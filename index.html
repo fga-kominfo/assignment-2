@@ -19,7 +19,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-lg-3 col-md-12">
-                            <img src="https://via.placeholder.com/150" alt="Foto" class="img-thumbnail">
+                            <img src="https://placehold.co/150" alt="Foto" class="img-thumbnail">
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <h2 id="resume-name">Septri Putra Wiarka</h2>
@@ -30,7 +30,7 @@
                                 <a href="#" class="btn btn-success" id="resume-toggle">
                                     Kontak
                                 </a>
-                                <a href="https://id.linkedin.com/in/septri-putra-wiarka-980a39116" class="btn btn-primary" target="_blank">
+                                <a href="https://id.linkedin.com/in/septri-putra-wiarka-980a39116" class="btn btn-outline-primary" target="_blank">
                                     Resume
                                 </a>
                             </div>
@@ -88,42 +88,50 @@
                         <!-- Nama -->
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Anda">
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Anda" required>
+                            <div class="invalid-feedback">Nama tidak boleh kosong.</div>
                         </div>
                         <!-- Role -->
                         <div class="mb-3">
                             <label for="role" class="form-label">Role</label>
-                            <input type="text" class="form-control" id="role" name="role" placeholder="Masukkan Role Anda">
+                            <input type="text" class="form-control" id="role" name="role" placeholder="Masukkan Role Anda" required>
+                            <div class="invalid-feedback">Role tidak boleh kosong.</div>
                         </div>
                         <!-- Availablity -->
                         <div class="mb-3">
                             <label for="availablity" class="form-label">Availablity</label>
-                            <input type="text" class="form-control" id="availablity" name="availablity" placeholder="Masukkan ketersediaan Anda">
+                            <input type="text" class="form-control" id="availablity" name="availablity" placeholder="Masukkan Jenis Availablity Anda" required>
+                            <div class="invalid-feedback">Availablity tidak boleh kosong.</div>
                         </div>
                         <!-- Usia -->
                         <div class="mb-3">
                             <label for="usia" class="form-label">Usia</label>
-                            <input type="text" class="form-control" id="usia" name="usia" placeholder="Masukkan Usia Anda">
+                            <input type="text" class="form-control" id="usia" name="usia" placeholder="Masukkan Usia Anda" required>
+                            <div class="invalid-feedback">Usia tidak boleh kosong.</div>
                         </div>
                         <!-- Lokasi -->
                         <div class="mb-3">
                             <label for="lokasi" class="form-label">Lokasi</label>
-                            <input type="text" class="form-control" id="lokasi" name="lokasi" placeholder="Masukkan lokasi Anda">
+                            <input type="text" class="form-control" id="lokasi" name="lokasi" placeholder="Masukkan Lokasi Anda" required>
+                            <div class="invalid-feedback">Lokasi tidak boleh kosong.</div>
                         </div>
                         <!-- Pengalaman -->
                         <div class="mb-3">
                             <label for="pengalaman" class="form-label">Pengalaman</label>
-                            <input type="text" class="form-control" id="pengalaman" name="pengalaman" placeholder="Masukkan pengalaman kerja Anda">
+                            <input type="text" class="form-control" id="pengalaman" name="pengalaman" placeholder="Masukkan pengalaman Anda" required>
+                            <div class="invalid-feedback">Pengalaman tidak boleh kosong.</div>
                         </div>
                         <!-- Email -->
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email Anda">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email Anda" required>
+                            <div class="invalid-feedback">Email tidak boleh kosong.</div>
                         </div>
                         <!-- No. HP -->
                         <div class="mb-3">
                             <label for="no_hp" class="form-label">No. HP</label>
-                            <input type="text" class="form-control" id="no_hp" name="no_hp" placeholder="Masukkan No. HP Anda">
+                            <input type="text" class="form-control" id="no_hp" name="no_hp" placeholder="Masukkan No. HP Anda" required>
+                            <div class="invalid-feedback">No. HP tidak boleh kosong.</div>
                         </div>
 
                         <!-- Tombol Submit -->
@@ -140,7 +148,20 @@
         // Fungsi untuk mengupdate data resume
         function updateResume(event) {
             event.preventDefault(); // Mencegah reload halaman saat submit form
-            
+
+            // Validasi input form
+            let isValid = true;
+            document.querySelectorAll('#profile-form input').forEach(input => {
+                if (!input.value) {
+                    input.classList.add('is-invalid'); // Tambahkan kelas is-invalid jika input kosong
+                    isValid = false;
+                } else {
+                    input.classList.remove('is-invalid'); // Hapus kelas is-invalid jika input tidak kosong
+                }
+            });
+
+            if (!isValid) return; // Jika ada input yang kosong, hentikan fungsi di sini
+
             // Ambil nilai dari form
             const nama = document.getElementById('nama').value;
             const role = document.getElementById('role').value;
@@ -170,33 +191,27 @@
         // Fungsi untuk toggle mode edit dan tampilan resume
         function toggleResumeMode() {
             // Ambil tombol resume, form section, dan tombol submit
-            const resumeToggleBtn = document.getElementById('resume-toggle');
+            const resumeToggle = document.getElementById('resume-toggle');
             const formSection = document.getElementById('form-section');
-            const formInputs = document.querySelectorAll('input');
             const submitBtn = document.getElementById('submit-btn');
 
-            // Jika tombol saat ini bertuliskan 'Resume', maka aktifkan mode edit
-            if (resumeToggleBtn.innerText === 'Kontak') {
-                // Ubah teks tombol menjadi 'Edit'
-                resumeToggleBtn.innerText = 'Edit';
-
-                // Tampilkan form dan aktifkan semua input form serta tombol submit
-                formSection.style.display = 'block';
-                formInputs.forEach(input => {
-                    input.disabled = false; // Aktifkan input
-                });
+            // Toggle form section
+            if (formSection.style.display === 'none') {
+                formSection.style.display = 'block'; // Tampilkan form
+                resumeToggle.innerText = 'Edit'; // Ubah teks tombol
                 submitBtn.disabled = false; // Aktifkan tombol submit
-
-            } else {
-                // Jika tombol saat ini bertuliskan 'Edit', maka kembali ke mode lihat
-                resumeToggleBtn.innerText = 'Kontak';
-
-                // Sembunyikan form dan nonaktifkan semua input form dan tombol submit
-                formSection.style.display = 'none';
-                formInputs.forEach(input => {
-                    input.disabled = true; // Nonaktifkan input
+                // Aktifkan semua input form
+                document.querySelectorAll('input').forEach(input => {
+                    input.disabled = false;
                 });
+            } else {
+                formSection.style.display = 'none'; // Sembunyikan form
+                resumeToggle.innerText = 'Kontak'; // Kembali ke teks awal tombol
                 submitBtn.disabled = true; // Nonaktifkan tombol submit
+                // Nonaktifkan semua input form
+                document.querySelectorAll('input').forEach(input => {
+                    input.disabled = true;
+                });
             }
         }
 
@@ -206,12 +221,12 @@
         // Event listener untuk tombol submit
         document.getElementById('submit-btn').addEventListener('click', updateResume);
 
-        // Nonaktifkan form inputs dan tombol submit pada saat halaman dimuat
+        // Nonaktifkan form inputs dan tombol submit pada saat halaman dimuat 
         window.onload = () => {
             document.querySelectorAll('input').forEach(input => {
-                input.disabled = true; // Nonaktifkan input pada awalnya
+                input.disabled = true; // Nonaktifkan input pada awal loading
             });
-            document.getElementById('submit-btn').disabled = true; // Nonaktifkan tombol submit pada awalnya
+            document.getElementById('submit-btn').disabled = true; // Nonaktifkan tombol submit pada awal loading
         };
     </script>
 </body>
