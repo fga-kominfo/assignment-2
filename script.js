@@ -1,4 +1,4 @@
-let form = document.getElementById("input-form");
+const form = document.getElementById("input-form");
 form.style.display = "none";
 
 function editForm(){
@@ -9,13 +9,13 @@ function editForm(){
         form.style.display = "none";
     }
 
-    let nama = document.getElementById('pNama').innerHTML;
-    let role = document.getElementById('pRole').innerHTML;
-    let availability = document.getElementById('pAvailability').innerHTML;
-    let usia = document.getElementById('pUsia').innerHTML;
-    let lokasi = document.getElementById('pLokasi').innerHTML;
-    let experience= document.getElementById('pExperience').innerHTML;
-    let email = document.getElementById('pEmail').innerHTML;
+    const nama = document.getElementById('pNama').innerHTML;
+    const role = document.getElementById('pRole').innerHTML;
+    const availability = document.getElementById('pAvailability').innerHTML;
+    const usia = document.getElementById('pUsia').innerHTML;
+    const lokasi = document.getElementById('pLokasi').innerHTML;
+    const experience= document.getElementById('pExperience').innerHTML;
+    const email = document.getElementById('pEmail').innerHTML;
     
 
     document.getElementById("nama").value = nama
@@ -28,13 +28,13 @@ function editForm(){
 }
 
 function submitForm(event){
-    let newName = document.getElementById('nama').value;
-    let newRole = document.getElementById('role').value;
-    let newAvailability = document.getElementById('availability').value;
-    let newUsia = document.getElementById('usia').value;
-    let newLokasi = document.getElementById('lokasi').value;
-    let newExperience = document.getElementById('years_experience').value;
-    let newEmail = document.getElementById('email').value;
+    const newName = document.getElementById('nama').value;
+    const newRole = document.getElementById('role').value;
+    const newAvailability = document.getElementById('availability').value;
+    const newUsia = document.getElementById('usia').value;
+    const newLokasi = document.getElementById('lokasi').value;
+    const newExperience = document.getElementById('years_experience').value;
+    const newEmail = document.getElementById('email').value;
 
     document.getElementById("pNama").innerHTML = newName;
     document.getElementById("pRole").innerHTML = newRole;
