@@ -1,0 +1,52 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 20px; /
+}
+
+.card img {
+    border: none;
+    box-shadow: none;
+    object-fit: cover; 
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-body {
+    padding: 20px; 
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.profile-card, .form-card {
+    max-width: 700px; 
+    margin: 20px auto;
+}
+
+.profile-card img {
+    width: 150px; 
+    height: 150px;
+}
