@@ -20,7 +20,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav justify-content-end flex-grow-1 pe-8 me-4 gap-2">
+                <div class="navbar-nav ms-auto">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     <a class="nav-link" href="#">Product</a>
                     <a class="nav-link" href="#">Gallery</a>
@@ -36,93 +36,97 @@
     <div class="container mt-5">
         <div class="card">
             <div class="card-body">
-                <div class="col-lg-3 my-2">
-                    <div class="profile-card mb-3">
-                        <img src="./assets/gojo-profile.jpg" alt="profile" class="profile-image">
-                    </div>
-                </div>
-
-                <div class="col-lg-5 my-4">
-                    <h2 class="name" id="profile-name">Nama Anda</h2>
-                    <p class="role" id="profile-role">Front End Designer</p>
-                    <button class="btn btn-primary">Kontak</button>
-                    <button class="btn btn-outline-success">Resume</button>
-                </div>
-                <div class="col-lg-4 my-4">
-                    <div class="profile d-flex gap-5">
-                        <div class="labels fw-bold">
-                            <p>Availability</p>
-                            <p>Usia</p>
-                            <p>Lokasi</p>
-                            <p>Pengalaman</p>
-                            <p>Email</p>
+                <div class="row align-items-center">
+                    <div class="col-md-3 my-2">
+                        <div class="profile-card mb-3">
+                            <img src="./assets/gojo-profile.jpg" alt="profile" class="profile-image">
                         </div>
-                        <div class="value">
-                            <p id="profile-availability">Full Time</p>
-                            <p id="profile-usia">24</p>
-                            <p id="profile-lokasi">Jakarta</p>
-                            <p id="profile-pengalaman">2 Tahun</p>
-                            <p id="profile-email">dananoviandi@gmail.com</p>
+                    </div>
+
+                    <div class="col mt-5">
+                        <h2 id="profile-name">Dana Noviandi</h2>
+                        <p id="profile-role">Front End Designer</p>
+                        <button class="btn btn-primary" id="editButton">Edit</button>
+                        <button class="btn btn-outline-success">Resume</button>
+                    </div>
+                    <div class="col mt-5 border-start">
+                        <div class="profile d-flex gap-5">
+                            <div class="labels fw-bold">
+                                <ul class="list-unstyled">
+                                    <li class="mb-1"><strong>Availability</strong></li>
+                                    <li class="mb-1"><strong>Usia</strong></li>
+                                    <li class="mb-1"><strong>Lokasi</strong></li>
+                                    <li class="mb-1"><strong>Pengalaman</strong></li>
+                                    <li class="mb-1"><strong>Email</strong></li>
+                                </ul>
+                            </div>
+                            <div class="col-5">
+                                <ul class="list-unstyled text-body-secondary">
+                                    <li class="mb-1" id="profile-availability">Full Time</li>
+                                    <li class="mb-1" id="profile-age">22</li>
+                                    <li class="mb-1" id="profile-location">Jakarta</li>
+                                    <li class="mb-1" id="profile-experience">2 tahun</li>
+                                    <li class="mb-1" id="profile-email">dananoviandi@gmail.com</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Profile section end -->
+        <!-- Profile section end -->
 
-    <!-- Form  -->
-    <div class="container mt-5">
-        <div class="card">
-            <div class="card-body">
-                <form id="form-submit">
-                    <div class="mb-3">
-                        <label for="nama" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="nama" placeholder="Masukan nama anda">
-                    </div>
-                    <div class="mb-3">
-                        <label for="role" class="form-label">Role</label>
-                        <input type="text" class="form-control" id="role">
-                    </div>
-                    <div class="mb-3">
-                        <label for="availability" class="form-label">Availability</label>
-                        <input type="text" class="form-control" id="availability">
-                    </div>
-                    <div class="mb-3">
-                        <label for="usia" class="form-label">Usia</label>
-                        <input type="text" class="form-control" id="usia">
-                    </div>
-                    <div class="mb-3">
-                        <label for="lokasi" class="form-label">Lokasi</label>
-                        <input type="text" class="form-control" id="lokasi">
-                    </div>
-                    <div class="mb-3">
-                        <label for="experience" class="form-label">Year Experience</label>
-                        <input type="text" class="form-control" id="experience">
-                    </div>
-                    <div class="mb-3">
-                        <label for="Email" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="Email">
-                    </div>
-                    <div class="d-grid gap-2 mt-2">
-                        <button type="button" class="btn btn-success">Submit</button>
-                    </div>
-                </form>
+        <!-- Form  -->
+        <div class="container mt-5" id="form-container">
+            <div class="card">
+                <div class="card-body">
+                    <form id="profile-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold">Nama</label>
+                            <input type="text" class="form-control" id="name" placeholder="masukkan nama anda" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="role" class="form-label fw-bold">Role</label>
+                            <input type="text" class="form-control" id="role" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="availability" class="form-label fw-bold">Availability</label>
+                            <input type="text" class="form-control" id="availability" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="age" class="form-label fw-bold">Usia</label>
+                            <input type="number" class="form-control" id="age" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label fw-bold">Lokasi</label>
+                            <input type="text" class="form-control" id="location" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="experience" class="form-label fw-bold">Years Experience</label>
+                            <input type="number" class="form-control" id="experience" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control" id="email" />
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Form end -->
+        <!-- Form end -->
+        <script src="script.js"> </script>
 
-    <!-- Boostrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+        <!-- Boostrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
