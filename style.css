@@ -25,6 +25,7 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
 }
 .btn-custom {
     margin-right: 10px;
