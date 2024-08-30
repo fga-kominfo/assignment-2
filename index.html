@@ -30,7 +30,7 @@
                                 <a href="#" class="btn btn-success" id="resume-toggle">
                                     Kontak
                                 </a>
-                                <a href="https://id.linkedin.com/in/septri-putra-wiarka-980a39116" class="btn btn-outline-primary" target="_blank">
+                                <a href="https://id.linkedin.com/in/septri-putra-wiarka-980a39116" class="btn btn-outline-primary" target="_blank" id="link-resume">
                                     Resume
                                 </a>
                             </div>
@@ -134,6 +134,13 @@
                             <div class="invalid-feedback">No. HP tidak boleh kosong.</div>
                         </div>
 
+                        <!-- link resume -->
+                        <div class="mb-3">
+                            <label for="linkedin" class="form-label">Linkedin</label>
+                            <input type="url" class="form-control" id="linkedin" name="linkedin" placeholder="Masukkan linkedin Anda" pattern="https?://.*" required>
+                            <div class="invalid-feedback">linkedin tidak boleh kosong dan harus berupa link. contoh: https://google.com</div>
+                        </div>
+
                         <!-- Tombol Submit -->
                         <div class="d-grid gap-2">
                             <button type="submit" class="btn btn-full btn-primary" id="submit-btn" disabled>Submit</button>
@@ -146,13 +153,13 @@
 
     <script>
         // Fungsi untuk mengupdate data resume
-        function updateResume(event) {
+        function tampilkanData(event) {
             event.preventDefault(); // Mencegah reload halaman saat submit form
 
             // Validasi input form
             let isValid = true;
             document.querySelectorAll('#profile-form input').forEach(input => {
-                if (!input.value) {
+                if (!input.checkValidity()) {
                     input.classList.add('is-invalid'); // Tambahkan kelas is-invalid jika input kosong
                     isValid = false;
                 } else {
@@ -171,6 +178,7 @@
             const pengalaman = document.getElementById('pengalaman').value;
             const email = document.getElementById('email').value;
             const no_hp = document.getElementById('no_hp').value;
+            const linkedin = document.getElementById('linkedin').value;
 
             // Update elemen-elemen dengan nilai dari form
             document.getElementById('resume-name').innerText = nama;
@@ -183,6 +191,7 @@
             document.getElementById('resume-email').href = 'mailto:' + email;
             document.getElementById('resume-phone').innerText = no_hp;
             document.getElementById('resume-phone').href = 'tel:' + no_hp;
+            document.getElementById('link-resume').href = linkedin;
 
             // Kembali ke mode tampilan setelah submit
             toggleResumeMode();
@@ -219,7 +228,7 @@
         document.getElementById('resume-toggle').addEventListener('click', toggleResumeMode);
 
         // Event listener untuk tombol submit
-        document.getElementById('submit-btn').addEventListener('click', updateResume);
+        document.getElementById('submit-btn').addEventListener('click', tampilkanData);
 
         // Nonaktifkan form inputs dan tombol submit pada saat halaman dimuat 
         window.onload = () => {
