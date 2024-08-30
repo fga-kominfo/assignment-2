@@ -67,7 +67,18 @@ function updateProfile(event) {
   setTimeout(() => {
     document.getElementById("profileName").textContent = name;
     document.getElementById("profileJob").textContent = job;
-    document.getElementById("profileAvailability").textContent = availability === "available" ? "Available to work" : "Not available";
+    document.getElementById("profileAvailability").textContent = (() => {
+      switch(availability) {
+        case "full-time":
+          return "Full Time";
+        case "part-time":
+          return "Part Time";
+        case "freelance":
+          return "Freelance";
+        default:
+          return "Not specified";
+      }
+    })();
     document.getElementById("profileAge").textContent = `${age} tahun`;
     document.getElementById("profileLocation").textContent = location;
     document.getElementById("profileExperience").textContent = `${experience} tahun`;
@@ -100,7 +111,18 @@ document.querySelector("form").addEventListener("submit", updateProfile);
 function fillFormWithCurrentProfile() {
   document.getElementById("name").value = document.getElementById("profileName").textContent;
   document.getElementById("job").value = document.getElementById("profileJob").textContent;
-  document.getElementById("availability").value = document.getElementById("profileAvailability").textContent === "Available to work" ? "available" : "unavailable";
+  document.getElementById("availability").value = (() => {
+    switch(document.getElementById("profileAvailability").textContent) {
+      case "Full Time":
+        return "full-time";
+      case "Part Time":
+        return "part-time";
+      case "Freelance":
+        return "freelance";
+      default:
+        return "";
+    }
+  })();
   document.getElementById("age").value = document.getElementById("profileAge").textContent.replace(" tahun", "");
   document.getElementById("location").value = document.getElementById("profileLocation").textContent;
   document.getElementById("experience").value = document.getElementById("profileExperience").textContent.replace(" tahun", "");

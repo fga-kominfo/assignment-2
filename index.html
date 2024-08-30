@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,13 @@
     <meta name="author" content="Muhammad Ridwan" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
+
+    <!--Custom Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+
   </head>
   <body>
     <header>
@@ -21,7 +28,7 @@
           <button
             id="hamburger-btn"
             class="md:hidden self-end mb-4"
-            aria-label="Menu"
+            aria-label="Buka Menu"
             type="button"
           >
             <svg
@@ -169,16 +176,16 @@
                 1 tahun
               </p>
               <p class="font-bold text-sm text-gray-600">Email</p>
-              <p id="profileEmail" class="text-base font-medium break-all">
+              <address id="profileEmail" class="text-base font-medium break-all not-italic">
                 muh.rdwan.u@gmail.com
-              </p>
+              </address>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Form Section -->
-      <form action="" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form action="" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" novalidate>
         <div class="mb-4">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
             Nama
@@ -189,6 +196,7 @@
             type="text"
             placeholder="Masukkan nama Anda"
             required
+            autocomplete="name"
           />
         </div>
         <div class="mb-4">
@@ -213,9 +221,12 @@
           <select
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="availability"
+            required
           >
-            <option value="available">Available to work</option>
-            <option value="unavailable">Not available</option>
+            <option value="">Pilih availability</option>
+            <option value="full-time">Full Time</option>
+            <option value="part-time">Part Time</option>
+            <option value="freelance">Freelance</option>
           </select>
         </div>
         <div class="mb-4">
@@ -270,13 +281,11 @@
             type="email"
             placeholder="Masukkan email Anda"
             required
+            autocomplete="email"
           />
         </div>
         <div class="mb-4">
-          <label
-            class="block text-gray-700 text-sm font-bold mb-2"
-            for="profilePicture"
-          >
+          <label for="profilePicture" class="block text-gray-700 text-sm font-bold mb-2">
             Foto Profil
           </label>
           <input
@@ -285,7 +294,11 @@
             type="file"
             accept="image/*"
             required
+            aria-describedby="profilePictureHelp"
           />
+          <p id="profilePictureHelp" class="mt-1 text-sm text-gray-500">
+            Pilih file gambar untuk foto profil Anda.
+          </p>
         </div>
         <div class="flex items-center justify-between">
           <button
