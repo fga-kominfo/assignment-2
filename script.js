@@ -16,3 +16,20 @@ function updateProfile(event) {
   document.getElementById("screenExperience").innerHTML = experience;
   document.getElementById("screenEmail").innerHTML = email;
 }
+
+function actionEdit() {
+  document.getElementById("name").value =
+    document.getElementById("screenName").innerHTML;
+  document.getElementById("role").value =
+    document.getElementById("screenRole").innerHTML;
+  document.getElementById("availability").value =
+    document.getElementById("screenAvailability").innerHTML;
+  document.getElementById("usia").value =
+    document.getElementById("screenAge").innerHTML;
+  document.getElementById("lokasi").value =
+    document.getElementById("screenLocation").innerHTML;
+  document.getElementById("experience").value =
+    document.getElementById("screenExperience").innerHTML;
+  document.getElementById("email").value =
+    document.getElementById("screenEmail").innerHTML;
+}
