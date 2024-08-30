@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Form Assignment 2</title>
+  </head>
+  <body>
+    <nav class="border-bottom p-1 shadow-nav" id="navbar">
+      <div class="container">
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link link-secondary" aria-current="page" href="#"
+              >HOME</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-secondary" href="#">PRODUCT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-secondary" href="#">GALLERY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-secondary" href="#">BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link link-secondary"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >INVENTORY</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="bg-light p-5" id="profile">
+      <div class="container bg-white card">
+        <div class="row p-2">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-4 text-start me-0 d-flex justify-content-center">
+                <img
+                  src="logo.jpg"
+                  class="img-fluid rounded-circle"
+                  alt="logo"
+                />
+              </div>
+              <div class="col-md-8 text-start">
+                <p class="fs-2 fw-bold mb-0 mt-3" id="displayNama">Nama Anda</p>
+                <p id="displayRole">Front End Designer</p>
+
+                <div class="mb-4">
+                  <button type="button" class="btn btn-primary mb-2">
+                    Kontak
+                  </button>
+                  <button type="button" class="btn btn-outline-success mb-2">
+                    Resume
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 border-start mt-1" id="form">
+            <table class="table table-borderless small-text">
+              <tr>
+                <td class="fw-bold">Availability</td>
+                <td id="displayAvailability">Fulltime</td>
+              </tr>
+
+              <tr>
+                <td class="fw-bold">Usia</td>
+                <td id="displayUsia">19</td>
+              </tr>
+
+              <tr>
+                <td class="fw-bold">Lokasi</td>
+                <td id="displayLokasi">Jakarta</td>
+              </tr>
+
+              <tr>
+                <td class="fw-bold">Pengalaman</td>
+                <td id="displayYears">2 Tahun</td>
+              </tr>
+
+              <tr>
+                <td class="fw-bold">Email</td>
+                <td id="displayEmail">email@gmail.com</td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light" id="form">
+      <div class="container py-4 px-3 mb-5 bg-white card">
+        <div class="row">
+          <div class="mb-3">
+            <label for="nama" class="form-label fw-bold mb-0">Nama</label>
+            <div class="input-group input-group-sm">
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                value="masukkan nama anda"
+                class="form-control border-dark"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="role" class="form-label fw-bold mb-0">Role</label>
+            <div class="input-group input-group-sm">
+              <input
+                type="text"
+                id="role"
+                name="role"
+                class="form-control border-dark"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="availability" class="form-label fw-bold mb-0"
+              >Availability</label
+            >
+            <div class="input-group input-group-sm">
+              <input
+                type="text"
+                id="availability"
+                name="availability"
+                class="form-control border-dark"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="usia" class="form-label fw-bold mb-0">Usia</label>
+            <div class="input-group input-group-sm">
+              <input
+                type="text"
+                id="usia"
+                name="usia"
+                class="form-control border-dark"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="lokasi" class="form-label fw-bold mb-0">Lokasi</label>
+            <div class="input-group input-group-sm">
+              <input
+                type="text"
+                id="lokasi"
+                name="lokasi"
+                class="form-control border-dark"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="years" class="form-label fw-bold mb-0"
+              >Years Experience</label
+            >
+            <div class="input-group input-group-sm">
+              <input
+                type="text"
+                id="years"
+                name="years"
+                class="form-control border-dark"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label fw-bold mb-0">Email</label>
+            <div class="input-group input-group-sm">
+              <input
+                type="text"
+                id="email"
+                name="email"
+                class="form-control border-dark"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </div>
+          </div>
+
+          <div class="d-grid gap-1">
+            <button class="btn btn-success" type="button" id="submitBtn">SUBMIT</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
