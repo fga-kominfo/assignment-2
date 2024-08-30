@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil dan Form Biodata</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#product">Product</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#blog">Blog</a>
+    <a href="#inventory">Inventory</a>
+</nav>
+
+<div class="container" id="displayData">
+    <div class="profile-info">
+        <img src="https://cdn.pixabay.com/photo/2017/02/25/22/04/user-icon-2098873_1280.png" alt="Foto Profil">
+        <div>
+            <h1 id="profile-name">Jon Ladiang</h1>
+            <p id="profile-role">Front End Designer</p>
+            <br>
+            <a href="#" class="edit-kontak">Kontak</a>
+            <a href="#" class="edit-resume">Edit Resume</a>
+        </div>
+        <div>
+            <p><strong>Availability:</strong> <span id="profile-availability">Full Time</span></p>
+            <p><strong>Usia:</strong> <span id="profile-age">19</span></p>
+            <p><strong>Lokasi:</strong> <span id="profile-location">Jakarta</span></p>
+            <p><strong>Years Experience:</strong> <span id="profile-experience">2</span></p>
+            <p><strong>Email:</strong> <span id="profile-email">diogeovani@gmail.com</span></p>
+        </div>
+    </div>
+    
+ 
+
+<form id="biodataForm" action="#" method="post">
+    <h2>Form Biodata</h2>
+    <label for="name">Nama:</label>
+    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
+    <label for="role">Role:</label>
+    <input type="text" id="role" name="role" placeholder="Masukkan peran Anda" required>
+
+    <label for="availability">Availability:</label>
+    <select id="availability" name="availability" required>
+        <option value="full-time">Full Time</option>
+        <option value="part-time">Part Time</option>
+        <option value="freelance">Freelance</option>
+    </select>
+
+    <label for="age">Usia:</label>
+    <input type="number" id="age" name="age" placeholder="Masukkan usia Anda" required>
+
+    <label for="location">Lokasi:</label>
+    <input type="text" id="location" name="location" placeholder="Masukkan lokasi Anda" required>
+
+    <label for="experience">Years Experience:</label>
+    <input type="number" id="experience" name="experience" placeholder="Masukkan jumlah tahun pengalaman" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    // Ambil form dan elemen-elemen profil
+    const form = document.getElementById('biodataForm');
+    const profileName = document.getElementById('profile-name');
+    const profileRole = document.getElementById('profile-role');
+    const profileAvailability = document.getElementById('profile-availability');
+    const profileAge = document.getElementById('profile-age');
+    const profileLocation = document.getElementById('profile-location');
+    const profileExperience = document.getElementById('profile-experience');
+    const profileEmail = document.getElementById('profile-email');
+
+    // Fungsi untuk menangani submit form
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Mencegah submit form secara default
+
+        // Ambil nilai input dari form
+        const name = document.getElementById('name').value;
+        const role = document.getElementById('role').value;
+        const availability = document.getElementById('availability').value;
+        const age = document.getElementById('age').value;
+        const location = document.getElementById('location').value;
+        const experience = document.getElementById('experience').value;
+        const email = document.getElementById('email').value;
+
+        // Ganti deskripsi pada section profile dengan data yang baru
+        profileName.textContent = name;
+        profileRole.textContent = role;
+        profileAvailability.textContent = availability;
+        profileAge.textContent = age;
+        profileLocation.textContent = location;
+        profileExperience.textContent = experience;
+        profileEmail.textContent = email;
+    });
+</script>
+
+
+<footer>
+    <p>© 2024 Jon Ladiang. CoppyRight.</p>
+</footer>
+
+</body>
+</html>
+    
