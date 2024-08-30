@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f9fd;
+}
+.navbar {
+  margin-bottom: 20px;
+  padding-right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.profile-card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.table-sm tr th {
+  padding-right: 100px;
+}
+.profile-info {
+  padding: 10px 0;
+}
+.profile-button {
+  padding: 30px 0 30px 0;
+}
+.profile-info p {
+  margin: 0;
+}
+.garis {
+  border-left: 2px solid #f8f9fd;
+  height: 155px;
+}
+.contact-buttons a {
+  margin-right: 10px;
+}
+.form-section {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin-top: 30px;
+}
+.form-section .form-group {
+  margin-bottom: 15px;
+}
+.form-group p {
+  margin: 0;
+}
+.submit-button {
+  background-color: #4caf50;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+li {
+  padding: 0 10px;
+}
+
+@media only screen and (max-width: 991px) {
+  .table-sm tr th {
+    padding-right: 50px;
+  }
+}
