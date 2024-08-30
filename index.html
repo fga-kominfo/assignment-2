@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portofolio</title>
+</head>
+    <!-- navabar -->
+    <header class="shadow p-3 mb-5 bg-body rounded mt-0 ms-0 me-0">
+        <div class="btn-nav">
+            <button type="button" class="btn btn-light d-block d-md-none btn-nav" data-bs-toggle="collapse"
+                data-bs-target="#nav"><i class="fa-solid fa-bars"></i></button>
+            <ul class="ul-dropdown collapse list-group " id="nav">
+                <li class="list-group-item"><a class="link-collapse link-secondary" href="#">HOME</a></li>
+                <li class="list-group-item"><a class="link-collapse link-secondary" href="#">PRODUCT</a></li>
+                <li class="list-group-item"><a class="link-collapse link-secondary" href="#">GALLERY</a>
+                </li>
+                <li class="list-group-item"><a class="link-collapse link-secondary" href="#">INVENTORY</a></li>
+            </ul>
+        </div>
+        <ul class="nav d-md-flex d-none justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link link-secondary" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-secondary" href="#">PRODUCT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-secondary" href="#">GALLERY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-secondary" href="#">INVENTORY</a>
+            </li>
+
+        </ul>
+    </header>
+    <div class="container">
+        <div class="d-grid gap-3">
+            <div class="row ">
+                <div class="col bg-white ">
+                    <div class="row ">
+                        <div class="col-lg-7 custom-border-end">
+                            <div class="row ms-0 me-0 mb-0">
+                                <div class="col-lg-5 col-md-4 ">
+                                    <img src="assets/img/ana.jpg" class="img-fluid justify-content-center" alt="photo-profile">
+                                </div>
+                                <div class="col">
+                                    <div class="bio">
+                                        <h1 id="pNama">Nama Anda</h1>
+                                        <p id="pRole">Front End Designer</p>
+                                        <div class="btn-profile">
+                                            <div class="btn-edit">
+                                                <button type="button"
+                                                    class="btn me-2 mt-3 btn-outline-primary active btn-box-shadow " onclick="editForm()">EDIT</button>
+                                            </div>
+                                            <div class="btn-resume">
+                                                <button type="button"
+                                                    class="btn mt-3 btn-outline-success">Resume</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-8">
+                            <div class="row me-0">
+                                <div class="col profile-bio mt-4 py-2 ms-2 col-md-3 .offset-md-3">
+                                    <p>Availability </p>
+                                    <p>Usia</p>
+                                    <p>Lokasi</p>
+                                    <p>Pengalaman</p>
+                                    <p>nama</p>
+                                </div>
+                                <div class="col profile-info mt-4 py-2 ">
+                                    <p id="pAvailability">Full Time</p>
+                                    <p id="pUsia">19</p>
+                                    <p id="pLokasi">Jakarta</p>
+                                    <p id="pExperience">2 Tahun</p>
+                                    <p id="pEmail">nama@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 bg-white">
+                <div class="col ">
+                    <form action="" id="input-form">
+                        <div class="mb-3 mt-3">
+                            <label for="nama">Nama</label>
+                            <input type="input" class="form-control" id="nama"
+                                name="nama">
+                        </div>
+                        <div class="mb-3">
+                            <label for="role">Role</label>
+                            <input type="input" class="form-control" id="role" name="role">
+                        </div>
+                        <div class="mb-3">
+                            <label for="availability">Availability</label>
+                            <input type="input" class="form-control" id="availability" name="availability">
+                        </div>
+                        <div class="mb-3">
+                            <label for="usia">Usia</label>
+                            <input type="number" class="form-control" id="usia" name="usia">
+                        </div>
+                        <div class="mb-3">
+                            <label for="lokasi">Lokasi</label>
+                            <input type="input" class="form-control" id="lokasi" name="lokasi">
+                        </div>
+                        <div class="mb-3">
+                            <label for="years_experience">Years Experience</label>
+                            <input type="input" class="form-control" id="years_experience" name="years_experience">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="d-grid btn-submit mb-4">
+                            <button type="buuton" onclick="submitForm(event)" class="btn btn-success btn-box-shadow">SUBMIT</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
