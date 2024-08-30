@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"> -->
+	<title>Assignment-1/26 - Rizal Fahmi</title>
+</head>
+
+<body class="bg-light">
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-lg bg-white">
+		<div class="container-fluid">
+			<a class="navbar-brand fw-bold ms-lg-5 ps-lg-5" href="index.html">LOGO</a>
+			<!-- button toggle responsive -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				<!-- <i class="fas fa-bars"></i> -->
+			</button>
+
+			<!-- navbar collapse -->
+			<div class="collapse navbar-collapse me-lg-5 pe-lg-5" id="navbarNav">
+				<!-- menu navbar -->
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link active" href="index.html">HOME</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">PRODUCT</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">GALLERY</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">BLOG</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">INVENTORY</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- profile -->
+	<div class="container my-5 bg-white rounded shadow">
+		<div class="row align-items-center py-3">
+			<div class="col-12 col-md-7 px-4 d-flex align-items-center">
+				<img src="https://shorturl.at/W3V5t" alt="profile" width="172" class="img-fluid rounded-circle">
+				<div class="ms-4">
+					<p class="fs-2 fw-bold mb-0" id="name">Rizal Fahmi</p>
+					<p class="text-muted" id="role">Frontend Developer</p>
+					<div class="mt-sm-0 mt-md-5 d-flex flex-column flex-md-row">
+						<a href="#" class="btn btn-primary mb-2 mb-md-0 me-md-2">Contact</a>
+						<a href="#" class="btn btn-outline-success">Resume</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-5 border-start mt-4 mt-md-0">
+				<table class="table table-borderless">
+					<tr>
+						<td class="fw-bold pb-0">Availability</td>
+						<td class="text-muted pb-0" id="availability">Full Time</td>
+					</tr>
+					<tr>
+						<td class="fw-bold pb-0">Age</td>
+						<td class="text-muted pb-0" id="age">29</td>
+					</tr>
+					<tr>
+						<td class="fw-bold pb-0">Location</td>
+						<td class="text-muted pb-0" id="location">Banda Aceh</td>
+					</tr>
+					<tr>
+						<td class="fw-bold pb-0">Year Experience</td>
+						<td class="text-muted pb-0" id="yearExperience">2 Tahun</td>
+					</tr>
+					<tr>
+						<td class="fw-bold pb-0">Email</td>
+						<td class="text-muted pb-0" id="email">email@example.com</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<!-- form -->
+	<div class="container my-5 bg-white rounded shadow">
+		<form class="px-3 py-5">
+			<div class="mb-3">
+				<label for="inputName" class="form-label fw-bold mb-0">Name</label>
+				<input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+			</div>
+			<div class="mb-3">
+				<label for="inputRole" class="form-label fw-bold mb-0">Role</label>
+				<input type="text" class="form-control" id="inputRole">
+			</div>
+			<div class="mb-3">
+				<label for="inputAvailability" class="form-label fw-bold mb-0">Availability</label>
+				<input type="text" class="form-control" id="inputAvailability">
+			</div>
+			<div class="mb-3">
+				<label for="inputAge" class="form-label fw-bold mb-0">Age</label>
+				<input type="text" class="form-control" id="inputAge">
+			</div>
+			<div class="mb-3">
+				<label for="inputLocation" class="form-label fw-bold mb-0">Location</label>
+				<input type="text" class="form-control" id="inputLocation">
+			</div>
+			<div class="mb-3">
+				<label for="inputYearExperience" class="form-label fw-bold mb-0">Year Experience</label>
+				<input type="text" class="form-control" id="inputYearExperience">
+			</div>
+			<div class="mb-4">
+				<label for="inputEmail" class="form-label fw-bold mb-0">Email</label>
+				<input type="email" class="form-control" id="inputEmail">
+			</div>
+			<div class="d-grid">
+				<button type="button" id="submit" class="btn btn-success shadow-sm">SUBMIT</button>
+			</div>
+		</form>
+	</div>
+
+	<!-- footer -->
+	<footer class="bg-secondary text-white text-center py-3">
+		<p class="mb-0">&copy; 2024 Rizal Fahmi. All rights reserved.</p>
+	</footer>
+
+	<script src="script.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>
