@@ -7,13 +7,13 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   const years = document.getElementById("years").value;
   const email = document.getElementById("email").value;
 
-  document.getElementById("displayNama").textContent = nama;
-  document.getElementById("displayRole").textContent = role;
-  document.getElementById("displayAvailability").textContent = availability;
-  document.getElementById("displayUsia").textContent = usia;
-  document.getElementById("displayLokasi").textContent = lokasi;
-  document.getElementById("displayYears").textContent = years;
-  document.getElementById("displayEmail").textContent = email;
+  document.getElementById("displayNama").innerHTML = nama;
+  document.getElementById("displayRole").innerHTML = role;
+  document.getElementById("displayAvailability").innerHTML = availability;
+  document.getElementById("displayUsia").innerHTML = usia;
+  document.getElementById("displayLokasi").innerHTML = lokasi;
+  document.getElementById("displayYears").innerHTML = years;
+  document.getElementById("displayEmail").innerHTML = email;
 
   document.getElementById("navbar").scrollIntoView({ behavior: "smooth" });
 });
