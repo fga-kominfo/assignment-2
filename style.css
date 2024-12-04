@@ -1,0 +1,25 @@
+.shadow-nav {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  position: relative;
+}
+
+.small-text {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 670px) {
+  .col-md-6 {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .text-start {
+    text-align: center !important;
+  }
+
+  .border-start {
+    border-left: none !important;
+  }
+}
