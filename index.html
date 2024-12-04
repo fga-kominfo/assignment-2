@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Riwayat Hidup</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+
+    <!-- Section Profile -->
+    <div class="container">
+        <div class="row mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="text-center">Profile</h1>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12">
+                            <img src="https://placehold.co/150" alt="Foto" class="img-thumbnail">
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <h2 id="resume-name">Septri Putra Wiarka</h2>
+                            <p id="resume-role">Fullstack Developer</p>
+                            <hr>
+                            <!-- Button -->
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <a href="#" class="btn btn-success" id="resume-toggle">
+                                    Kontak
+                                </a>
+                                <a href="https://id.linkedin.com/in/septri-putra-wiarka-980a39116" class="btn btn-outline-primary" target="_blank" id="link-resume">
+                                    Resume
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <table class="table">
+                                <tr>
+                                    <td>Availablity</td>
+                                    <td>:</td>
+                                    <td id="resume-availability">Full-time</td>
+                                </tr>
+                                <tr>
+                                    <td>Usia</td>
+                                    <td>:</td>
+                                    <td id="resume-age">25 Tahun</td>
+                                </tr>
+                                <tr>
+                                    <td>Lokasi</td>
+                                    <td>:</td>
+                                    <td id="resume-location">Palembang, Sumatera Selatan</td>
+                                </tr>
+                                <tr>
+                                    <td>Pengalaman</td>
+                                    <td>:</td>
+                                    <td id="resume-experience">2 Tahun</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>:</td>
+                                    <td>
+                                        <a href="mailto:septriputraw@gmail.com" id="resume-email">septriputraw@gmail.com</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>No. HP</td>
+                                    <td>:</td>
+                                    <td>
+                                        <a href="tel:089690746848" id="resume-phone">089690746848</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Form -->
+        <div class="row mb-3" id="form-section" style="display: none;"> <!-- Form awalnya disembunyikan -->
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="text-center">Edit Profile</h1>
+                    <hr>
+                    <form id="profile-form">
+                        <!-- Nama -->
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Anda" required>
+                            <div class="invalid-feedback">Nama tidak boleh kosong.</div>
+                        </div>
+                        <!-- Role -->
+                        <div class="mb-3">
+                            <label for="role" class="form-label">Role</label>
+                            <input type="text" class="form-control" id="role" name="role" placeholder="Masukkan Role Anda" required>
+                            <div class="invalid-feedback">Role tidak boleh kosong.</div>
+                        </div>
+                        <!-- Availablity -->
+                        <div class="mb-3">
+                            <label for="availablity" class="form-label">Availablity</label>
+                            <input type="text" class="form-control" id="availablity" name="availablity" placeholder="Masukkan Jenis Availablity Anda" required>
+                            <div class="invalid-feedback">Availablity tidak boleh kosong.</div>
+                        </div>
+                        <!-- Usia -->
+                        <div class="mb-3">
+                            <label for="usia" class="form-label">Usia</label>
+                            <input type="text" class="form-control" id="usia" name="usia" placeholder="Masukkan Usia Anda" required>
+                            <div class="invalid-feedback">Usia tidak boleh kosong.</div>
+                        </div>
+                        <!-- Lokasi -->
+                        <div class="mb-3">
+                            <label for="lokasi" class="form-label">Lokasi</label>
+                            <input type="text" class="form-control" id="lokasi" name="lokasi" placeholder="Masukkan Lokasi Anda" required>
+                            <div class="invalid-feedback">Lokasi tidak boleh kosong.</div>
+                        </div>
+                        <!-- Pengalaman -->
+                        <div class="mb-3">
+                            <label for="pengalaman" class="form-label">Pengalaman</label>
+                            <input type="text" class="form-control" id="pengalaman" name="pengalaman" placeholder="Masukkan pengalaman Anda" required>
+                            <div class="invalid-feedback">Pengalaman tidak boleh kosong.</div>
+                        </div>
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email Anda" required>
+                            <div class="invalid-feedback">Email tidak boleh kosong dan harus valid. contoh: test@example.com</div>
+                        </div>
+                        <!-- No. HP -->
+                        <div class="mb-3">
+                            <label for="no_hp" class="form-label">No. HP</label>
+                            <input type="number" class="form-control" id="no_hp" name="no_hp" placeholder="Masukkan No. HP Anda" required>
+                            <div class="invalid-feedback">No. HP tidak boleh kosong.</div>
+                        </div>
+
+                        <!-- link resume -->
+                        <div class="mb-3">
+                            <label for="linkedin" class="form-label">Linkedin</label>
+                            <input type="url" class="form-control" id="linkedin" name="linkedin" placeholder="Masukkan linkedin Anda" pattern="https?://.*" required>
+                            <div class="invalid-feedback">linkedin tidak boleh kosong dan harus berupa link. contoh: https://google.com</div>
+                        </div>
+
+                        <!-- Tombol Submit -->
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-full btn-primary" id="submit-btn" disabled>Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk mengupdate data resume
+        function tampilkanData(event) {
+            event.preventDefault(); // Mencegah reload halaman saat submit form
+
+            // Validasi input form
+            let isValid = true;
+            document.querySelectorAll('#profile-form input').forEach(input => {
+                if (!input.checkValidity()) {
+                    input.classList.add('is-invalid'); // Tambahkan kelas is-invalid jika input kosong
+                    isValid = false;
+                } else {
+                    input.classList.remove('is-invalid'); // Hapus kelas is-invalid jika input tidak kosong
+                }
+            });
+
+            if (!isValid) return; // Jika ada input yang kosong, hentikan fungsi di sini
+
+            // Ambil nilai dari form
+            const nama = document.getElementById('nama').value;
+            const role = document.getElementById('role').value;
+            const availablity = document.getElementById('availablity').value;
+            const usia = document.getElementById('usia').value;
+            const lokasi = document.getElementById('lokasi').value;
+            const pengalaman = document.getElementById('pengalaman').value;
+            const email = document.getElementById('email').value;
+            const no_hp = document.getElementById('no_hp').value;
+            const linkedin = document.getElementById('linkedin').value;
+
+            // Update elemen-elemen dengan nilai dari form
+            document.getElementById('resume-name').innerText = nama;
+            document.getElementById('resume-role').innerText = role;
+            document.getElementById('resume-availability').innerText = availablity;
+            document.getElementById('resume-age').innerText = usia + ' Tahun';
+            document.getElementById('resume-location').innerText = lokasi;
+            document.getElementById('resume-experience').innerText = pengalaman + ' Tahun';
+            document.getElementById('resume-email').innerText = email;
+            document.getElementById('resume-email').href = 'mailto:' + email;
+            document.getElementById('resume-phone').innerText = no_hp;
+            document.getElementById('resume-phone').href = 'tel:' + no_hp;
+            document.getElementById('link-resume').href = linkedin;
+
+            // Kembali ke mode tampilan setelah submit
+            toggleResumeMode();
+        }
+
+        // Fungsi untuk toggle mode edit dan tampilan resume
+        function toggleResumeMode() {
+            // Ambil tombol resume, form section, dan tombol submit
+            const resumeToggle = document.getElementById('resume-toggle');
+            const formSection = document.getElementById('form-section');
+            const submitBtn = document.getElementById('submit-btn');
+
+            // Toggle form section
+            if (formSection.style.display === 'none') {
+                formSection.style.display = 'block'; // Tampilkan form
+                resumeToggle.innerText = 'Edit'; // Ubah teks tombol
+                submitBtn.disabled = false; // Aktifkan tombol submit
+                // Aktifkan semua input form
+                document.querySelectorAll('input').forEach(input => {
+                    input.disabled = false;
+                });
+            } else {
+                formSection.style.display = 'none'; // Sembunyikan form
+                resumeToggle.innerText = 'Kontak'; // Kembali ke teks awal tombol
+                submitBtn.disabled = true; // Nonaktifkan tombol submit
+                // Nonaktifkan semua input form
+                document.querySelectorAll('input').forEach(input => {
+                    input.disabled = true;
+                });
+            }
+        }
+
+        // Event listener untuk tombol toggle resume
+        document.getElementById('resume-toggle').addEventListener('click', toggleResumeMode);
+
+        // Event listener untuk tombol submit
+        document.getElementById('submit-btn').addEventListener('click', tampilkanData);
+
+        // Nonaktifkan form inputs dan tombol submit pada saat halaman dimuat 
+        window.onload = () => {
+            document.querySelectorAll('input').forEach(input => {
+                input.disabled = true; // Nonaktifkan input pada awal loading
+            });
+            document.getElementById('submit-btn').disabled = true; // Nonaktifkan tombol submit pada awal loading
+        };
+    </script>
+</body>
+</html>
